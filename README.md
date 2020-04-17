@@ -1,2 +1,2 @@
 # TDDExercise
-TDD Exercise 
+TDD Exercise of a grade conversion system
