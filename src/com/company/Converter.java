@@ -16,6 +16,7 @@ public class Converter {
 
     public String convert(String input){
         switch (input) {
+//          From EU to DK
             case "A":
                 grade = "12";
             break;
@@ -43,9 +44,35 @@ public class Converter {
             case "F":
                 grade = "-3";
             break;
+//          From DK To EU
+            case "12":
+                grade = "A";
+                break;
 
+            case "10":
+                grade = "B";
+                break;
+
+            case "7":
+                grade = "C";
+                break;
+
+            case "4":
+                grade = "D";
+                break;
+
+            case "02":
+                grade = "E";
+                break;
+
+            case "00":
+                grade = "Fx";
+                break;
+
+            case "-3":
+                grade = "F";
+                break;
         }
-        System.out.println(grade);
         return grade;
     }
 }
