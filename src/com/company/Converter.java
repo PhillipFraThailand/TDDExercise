@@ -81,7 +81,6 @@ public class Converter {
                 grade = "Error";
                 break;
         }
-        System.out.println(grade);
         return grade;
     }
 }
