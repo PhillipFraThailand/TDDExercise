@@ -6,7 +6,6 @@ import java.util.Scanner;
 
 public class Converter {
     public String grade = "";
-    ArrayList<String> ValidCases = new ArrayList<String>(Arrays.asList("-3", "00", "02", "4", "7", "10", "12","F", "Fx", "E", "D", "C", "B", "A"));
 
     //  Starts checkinf for input form the user
     public void start() {
