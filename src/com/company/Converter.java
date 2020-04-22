@@ -9,43 +9,44 @@ public class Converter {
     ArrayList<String> gradesDK = new ArrayList<String>(Arrays.asList("-3", "00", "02", "4", "7", "10", "12"));
     ArrayList<String> gradesEU = new ArrayList<String>(Arrays.asList("F", "Fx", "E", "D", "C", "B", "A"));
 
-    // Starts the converter
+    //  Starts checkinf for input form the user
     public void start() {
-//      Get input from the user
         System.out.println("Pleaser enter the grade that you want to convert");
         Scanner scn = new Scanner(System.in);
-//      Call the method and print the result
-        System.out.println(convert(scn.next()));
+        String scnInput = scn.next();
+
+        convert(scnInput);
+
     }
 
     public String convert(String input) {
         switch (input) {
 //          From EU to DK
-            case "A": case "a":
+            case "A":
                 grade = "12";
                 break;
 
-            case "B": case "b":
+            case "B":
                 grade = "10";
                 break;
 
-            case "C": case "c":
+            case "C":
                 grade = "7";
                 break;
 
-            case "D": case "d":
+            case "D":
                 grade = "4";
                 break;
 
-            case "E": case "e":
+            case "E":
                 grade = "02";
                 break;
 
-            case "FX": case "Fx": case "fX": case "fx":
+            case "Fx":
                 grade = "00";
                 break;
 
-            case "F": case "f":
+            case "F":
                 grade = "-3";
                 break;
 //          From DK To EU
@@ -81,6 +82,7 @@ public class Converter {
                 grade = "Error";
                 break;
         }
+        System.out.println(grade);
         return grade;
     }
 }

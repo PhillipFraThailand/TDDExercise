@@ -28,10 +28,16 @@ public class unitTest {
             assertEquals(converter.convert(dataProvider.InvalidDKValues.get(i)), "Error");
         }
     }
-
+    //Assert that the invalid values are throwing an error
+    // Note we are using Junit 4 that dosent come with the assertThrow function so we worked our way arounnd it
+    // By using the default mechanic in switch case to cover everything but the legal cases and then check that
+    // that the invalid cases from the dataprovider trigger the default message -  There's no need to chrash the
+    // Program
     @Test
     public void invalidEUValuesTest() {
-
+        for (int i = 0; i < dataProvider.InvalidEUValues.size(); i++) {
+            assertEquals(converter.convert(dataProvider.InvalidEUValues.get(i)), "Error");
+        }
     }
 
 
