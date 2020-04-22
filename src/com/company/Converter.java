@@ -6,16 +6,18 @@ import java.util.Scanner;
 
 public class Converter {
     public String grade = "";
-    ArrayList<String> gradesDK = new ArrayList<String>(Arrays.asList("-3", "00", "02", "4", "7", "10", "12"));
-    ArrayList<String> gradesEU = new ArrayList<String>(Arrays.asList("F", "Fx", "E", "D", "C", "B", "A"));
+    ArrayList<String> ValidCases = new ArrayList<String>(Arrays.asList("-3", "00", "02", "4", "7", "10", "12","F", "Fx", "E", "D", "C", "B", "A"));
 
     //  Starts checkinf for input form the user
     public void start() {
         // Get input from the user
-        System.out.println("Pleaser enter the grade that you want to convert");
+        System.out.println("Pleaser enter the grade that you want to convert.\nInput quit to stop");
         Scanner scn = new Scanner(System.in);
-        // Call the method and print the result
-        System.out.println(convert(scn.next()));
+
+        while (grade != "quitting") {
+            // Call the method and print the result
+            System.out.println(convert(scn.next()));
+        }
     }
 
     public String convert(String input) {
@@ -75,6 +77,9 @@ public class Converter {
 
             case "-3":
                 grade = "F";
+                break;
+            case "quit":
+                grade = "quitting";
                 break;
 
             default:
