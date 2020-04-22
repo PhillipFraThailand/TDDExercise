@@ -9,55 +9,43 @@ public class Converter {
     ArrayList<String> gradesDK = new ArrayList<String>(Arrays.asList("-3", "00", "02", "4", "7", "10", "12"));
     ArrayList<String> gradesEU = new ArrayList<String>(Arrays.asList("F", "Fx", "E", "D", "C", "B", "A"));
 
-    //  Starts checkinf for input form the user
+    // Starts the converter
     public void start() {
+//      Get input from the user
         System.out.println("Pleaser enter the grade that you want to convert");
         Scanner scn = new Scanner(System.in);
-        String scnInput = scn.next();
-        for (int i = 0; i <gradesDK.size() ; i++) {
-            for (int j = 0; j <gradesEU.size() ; j++) {
-                if (scnInput.contains(gradesDK.get(i)) || scnInput.contains(gradesEU.get(j))) {
-                    convert(scnInput);
-                    break;
-                }
-                else {
-                    System.out.println("invalid value");
-                }
-            }
-        }
-
-        convert(scnInput);
-
+//      Call the method and print the result
+        System.out.println(convert(scn.next()));
     }
 
     public String convert(String input) {
         switch (input) {
 //          From EU to DK
-            case "A":
+            case "A": case "a":
                 grade = "12";
                 break;
 
-            case "B":
+            case "B": case "b":
                 grade = "10";
                 break;
 
-            case "C":
+            case "C": case "c":
                 grade = "7";
                 break;
 
-            case "D":
+            case "D": case "d":
                 grade = "4";
                 break;
 
-            case "E":
+            case "E": case "e":
                 grade = "02";
                 break;
 
-            case "Fx":
+            case "FX": case "Fx": case "fX": case "fx":
                 grade = "00";
                 break;
 
-            case "F":
+            case "F": case "f":
                 grade = "-3";
                 break;
 //          From DK To EU
