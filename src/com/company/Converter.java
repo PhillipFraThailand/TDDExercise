@@ -11,42 +11,41 @@ public class Converter {
 
     //  Starts checkinf for input form the user
     public void start() {
+        // Get input from the user
         System.out.println("Pleaser enter the grade that you want to convert");
         Scanner scn = new Scanner(System.in);
-        String scnInput = scn.next();
-
-        convert(scnInput);
-
+        // Call the method and print the result
+        System.out.println(convert(scn.next()));
     }
 
     public String convert(String input) {
         switch (input) {
 //          From EU to DK
-            case "A":
+            case "A": case "a":
                 grade = "12";
                 break;
 
-            case "B":
+            case "B": case "b":
                 grade = "10";
                 break;
 
-            case "C":
+            case "C": case "c":
                 grade = "7";
                 break;
 
-            case "D":
+            case "D": case "d":
                 grade = "4";
                 break;
 
-            case "E":
+            case "E": case "e":
                 grade = "02";
                 break;
 
-            case "Fx":
+            case "Fx": case "fX": case "FX": case "fx":
                 grade = "00";
                 break;
 
-            case "F":
+            case "F":case "f":
                 grade = "-3";
                 break;
 //          From DK To EU
