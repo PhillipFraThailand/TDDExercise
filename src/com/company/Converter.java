@@ -23,8 +23,6 @@ public class Converter {
                 else {
                     System.out.println("invalid value");
                 }
-
-
             }
         }
 
@@ -95,7 +93,6 @@ public class Converter {
                 grade = "Error";
                 break;
         }
-        System.out.println(grade);
         return grade;
     }
 }
